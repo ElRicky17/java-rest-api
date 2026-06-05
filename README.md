@@ -1,48 +1,48 @@
+# Java REST API
 
-````markdown
-# Parcial Backend
-
-Este repositorio contiene el **backend** de un proyecto desarrollado como parte de un parcial académico.  
-Está construido en **Java** utilizando **Maven** como herramienta de construcción y **Docker** para la contenedorización.
+A backend REST API built with **Java** and **Maven**, containerized with **Docker**.
 
 ---
 
-## Estructura del Proyecto
+## Project Structure
 
-El proyecto sigue una estructura estándar de Maven:
-
-- `src/` : Contiene el código fuente del proyecto.  
-- `.github/workflows/` : Contiene configuraciones para flujos de trabajo de GitHub Actions.  
-- `.env` : Archivo de configuración de variables de entorno.  
-- `.gitignore` : Especifica qué archivos o directorios deben ser ignorados por Git.  
-- `Dockerfile` : Archivo para construir la imagen Docker del proyecto.  
-- `docker-compose.yml` : Archivo para definir y ejecutar aplicaciones Docker multi-contenedor.  
-- `pom.xml` : Archivo de configuración de Maven que define las dependencias y plugins del proyecto.  
-
----
-
-## Requisitos
-
-- **Java 21** o superior  
-- **Docker**
-
----
-
-## Instalación
-
-Clona el repositorio:
-
-```bash
-git clone https://github.com/ElRicky17/parcial-backend.git
-cd parcial-backend
-Construye y levanta los contenedores con Docker Compose:
-
-```bash
-docker-compose up --build
+```
+java-rest-api/
+├── src/                    # Application source code
+├── .github/workflows/      # GitHub Actions CI configuration
+├── Dockerfile              # Docker image definition
+├── docker-compose.yml      # Multi-container Docker setup
+├── pom.xml                 # Maven dependencies and build config
+├── .env.example            # Environment variable template
+└── .gitignore
 ```
 
 ---
 
-## Uso
+## Requirements
 
-Una vez que los contenedores estén en funcionamiento, puedes acceder al backend a través de la URL proporcionada en la configuración de **Docker Compose**.
+- Java 21+
+- Docker + Docker Compose
+
+---
+
+## Getting Started
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/ElRicky17/java-rest-api.git
+   cd java-rest-api
+   ```
+
+2. Set up environment variables:
+   ```bash
+   cp .env.example .env
+   # Edit .env with your configuration
+   ```
+
+3. Build and start the containers:
+   ```bash
+   docker-compose up --build
+   ```
+
+The API will be available at the URL defined in `docker-compose.yml`.
